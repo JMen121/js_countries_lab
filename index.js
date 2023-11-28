@@ -6,16 +6,20 @@ const getCountryByName = async (countryName) => {
     const country = data[0];
     console.log(country);
     
+ // This line of code is using JavaScript to get a reference to an HTML element 
+  //with the id "country-info" and store it in a variable named displayCountry.
+    const displayinfo = document.getElementById("country-info");
 
-    const displayCountry = document.getElementById("country-info");
     const displayCountryName = document.createElement('p')
-    displayCountryName.innerText =`country: ${country.name.common}`
-    displayCountry.appendChild(displayCountryName);
+    displayCountryName.innerText =`Country: ${country.name.common}`
+    displayinfo.appendChild(displayCountryName);
 
 
     const countryCapital= document.createElement('h1');
     countryCapital.innerText=`capital: ${country.capital[0]}`
-    countryCapital.appendChild(countryCapital);
+    displayinfo.appendChild(countryCapital);
+
+    
 
 
 }
