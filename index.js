@@ -19,7 +19,12 @@ const getCountryByName = async (countryName) => {
     countryCapital.innerText=`capital: ${country.capital[0]}`
     displayinfo.appendChild(countryCapital);
 
-    
+    const languages = document.createElement('p');
+    const arrayLanguage = Object.values(country.languages);
+    const languagesString = arrayLanguage.join(", ");
+    languages.innerText = `Languages: ${languagesString}`;
+    console.log(languages.innerText);
+    displayinfo.appendChild(languages)
 
 
 }
