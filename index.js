@@ -1,9 +1,9 @@
 const getCountryByName = async (countryName) => {
     // fetch data from REST countries API
     const response = await fetch(`https://restcountries.com/v3.1/name/${countryName}`)
-    const data = await response.json();
+    const arrayOfCountries = await response.json();
     //You are retrieving an array
-    const country = data[0];
+    const country = arrayOfCountries[0];
     console.log(country);
     
  // This line of code is using JavaScript to get a reference to an HTML element 
